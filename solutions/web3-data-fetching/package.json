@@ -7,24 +7,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export"
   },
   "dependencies": {
-    "@vercel/examples-ui": "^1.0.5",
     "ethers": "^5.7.2",
-    "next": "12.1.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "^13.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/node": "17.0.14",
-    "@types/react": "17.0.38",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.36.0",
-    "eslint-config-next": "^12.3.4",
+    "eslint-config-next": "^13.4.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7",
     "turbo": "^1.8.3",
-    "typescript": "4.5.5"
+    "typescript": "4.9.5"
   }
 }

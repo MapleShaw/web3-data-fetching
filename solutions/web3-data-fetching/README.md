@@ -9,9 +9,34 @@ deployUrl: https://vercel.com/new/clone?repository-url=https://github.com/vercel
 demoUrl: https://web3-data-fetching.vercel.app/
 ---
 
-# web3-data-fetching example
+# Web3 数据获取示例
 
-This example shows how to fetch data from the blockchain in Next.js
+这是一个简单的Next.js应用程序，展示如何从以太坊区块链获取智能合约数据。
+
+## 功能
+
+- 从智能合约获取数据（名称、符号、总供应量等）
+- 测试多个不同的合约（BAYC、Azuki、USDT等）
+- 使用ethers.js与以太坊区块链交互
+
+## 技术栈
+
+- Next.js
+- TypeScript
+- ethers.js
+- React
+
+## 如何使用
+
+1. 克隆仓库
+2. 安装依赖：`npm install`
+3. 运行开发服务器：`npm run dev`
+4. 访问 http://localhost:3000
+
+## 页面
+
+- 主页：基本概念和示例
+- 测试合约页面：测试多个以太坊合约
 
 ## Demo
 
