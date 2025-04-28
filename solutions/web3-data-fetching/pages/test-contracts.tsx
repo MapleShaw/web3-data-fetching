@@ -41,6 +41,19 @@ export default function TestContracts({ contractInfos, error }: {
   contractInfos: ContractInfo[], 
   error?: string | null 
 }) {
+  const backLinkStyle = {
+    display: 'inline-block',
+    color: '#0070f3',
+    backgroundColor: '#f0f7ff',
+    border: '1px solid #cce3fe',
+    padding: '0.5rem 1rem',
+    borderRadius: '0.25rem',
+    fontSize: '1rem',
+    fontWeight: 500,
+    textDecoration: 'none',
+    transition: 'all 0.15s ease'
+  };
+  
   return (
     <div className="container">
       <Head>
@@ -53,7 +66,7 @@ export default function TestContracts({ contractInfos, error }: {
         <h1 className="title">Test Different Ethereum Contracts</h1>
         
         <div className="nav-link">
-          <Link href="/" className="back-link">
+          <Link href="/" style={backLinkStyle}>
             ← Back to Home
           </Link>
         </div>
@@ -130,23 +143,6 @@ export default function TestContracts({ contractInfos, error }: {
         }
         .nav-link {
           margin-bottom: 2rem;
-        }
-        .back-link {
-          display: inline-block;
-          color: #0070f3;
-          background-color: #f0f7ff;
-          border: 1px solid #cce3fe;
-          padding: 0.5rem 1rem;
-          border-radius: 0.25rem;
-          font-size: 1rem;
-          font-weight: 500;
-          text-decoration: none;
-          transition: all 0.15s ease;
-        }
-        .back-link:hover {
-          background-color: #e1efff;
-          border-color: #0070f3;
-          text-decoration: none;
         }
         .error-box {
           background-color: #fff5f5;
@@ -294,9 +290,7 @@ export async function getStaticProps() {
       props: {
         contractInfos,
         error: null
-      },
-      // Revalidate once per hour
-      revalidate: 3600
+      }
     };
   } catch (error: any) {
     console.error('Error fetching contract data:', error);
@@ -313,9 +307,7 @@ export async function getStaticProps() {
       props: {
         contractInfos: [],
         error: errorMessage
-      },
-      // Retry after a minute in case of error
-      revalidate: 60
+      }
     };
   }
 } 

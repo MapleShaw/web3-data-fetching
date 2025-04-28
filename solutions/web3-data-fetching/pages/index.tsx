@@ -16,6 +16,20 @@ const contract = new ethers.Contract(
 )
 
 export default function Home({ contractName, error }: { contractName: string, error?: string | null }) {
+  const buttonStyle = {
+    display: 'inline-block',
+    backgroundColor: '#0070f3',
+    color: 'white',
+    padding: '0.5rem 1rem',
+    borderRadius: '0.25rem',
+    fontWeight: 500,
+    marginTop: '0.75rem',
+    textDecoration: 'none',
+    transition: 'background-color 0.15s ease'
+  };
+
+  console.log(contractNames)
+  
   return (
     <div className="container">
       <Head>
@@ -131,9 +145,9 @@ const { data } = useSWR('name', () => contract.name())
         <div className="card">
           <h2>More Tests</h2>
           <div>
-            <a href="/test-contracts" className="button-link">
+            <Link href="/test-contracts" style={buttonStyle}>
               View more Ethereum contract examples →
-            </a>
+            </Link>
           </div>
           <p className="small-text">
             You can test fetching information from different smart contracts on this page
@@ -212,31 +226,6 @@ const { data } = useSWR('name', () => contract.name())
           border-radius: 0.5rem;
           border: 1px solid #e2e8f0;
           margin-top: 1rem;
-        }
-        .button-link {
-          display: inline-block;
-          background-color: #0070f3;
-          color: white !important;
-          padding: 0.5rem 1rem;
-          border-radius: 0.25rem;
-          font-weight: 500;
-          margin-top: 0.75rem;
-          text-decoration: none;
-          transition: background-color 0.15s ease;
-        }
-        .button-link:hover {
-          background-color: #0060d5;
-          text-decoration: none !important;
-        }
-        .link {
-          display: inline-block;
-          color: #0070f3;
-          text-decoration: none;
-          margin-top: 0.5rem;
-          font-weight: 500;
-        }
-        .link:hover {
-          text-decoration: underline;
         }
       `}</style>
     </div>
