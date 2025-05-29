@@ -9,7 +9,7 @@
 - [Starter](/starter) – Functional applications which can act as a starting point
 - And more!
 
-## Vercel Templates
+## Vercel Templates AAA
 
 Multiple examples are being featured in [Vercel's Templates](https://vercel.com/templates), visit that page for more advanced filtering options.
 
